@@ -3,13 +3,13 @@
 
 const duplicate = (value, number) => {
   if (number <= 0) return [];
-  else {
-    const result = [];
-    for (let i = 0; i < number; i++) {
-      result[i] = value;
-    }
-    return result;
+
+  const result = [];
+  for (let i = 0; i < number; i++) {
+    result[i] = value;
   }
+
+  return result;
 };
 
 module.exports = duplicate;

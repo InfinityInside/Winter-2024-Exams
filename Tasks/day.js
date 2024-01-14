@@ -9,6 +9,7 @@ const parseDay = (day) => {
       return i + 1;
     }
   }
+
   return -1;
 };
 

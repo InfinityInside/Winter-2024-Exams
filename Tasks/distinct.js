@@ -3,8 +3,8 @@
 
 const distinct = (array) => {
   const distArray = new Set();
-  let index = 0;
-  array.forEach((elem) => {
+
+  array.forEach((elem, index) => {
     if (distArray.has(elem)) {
       delete array[index];
     } else {
@@ -12,6 +12,7 @@ const distinct = (array) => {
     }
     index++;
   });
+
   return array.filter((x) => typeof x === 'number');
 };
 

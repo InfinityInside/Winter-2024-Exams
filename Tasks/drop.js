@@ -3,6 +3,7 @@
 
 const deleteKeys = (dictionary, ...toDelete) => {
   const keys = Object.keys(dictionary);
+
   keys.forEach(
     (key) => {
       if (toDelete.includes(key)) {
@@ -10,6 +11,7 @@ const deleteKeys = (dictionary, ...toDelete) => {
       }
     },
   );
+
   return dictionary;
 };
 
