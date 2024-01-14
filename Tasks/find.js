@@ -2,9 +2,10 @@
 'use strict';
 
 const find = (object, value) => {
-  for (const name in object) {
-    if (object[name] === value) {
-      return name;
+  const keys = Object.keys(object);
+  for (const key of keys) {
+    if (object[key] === value) {
+      return key;
     }
   }
 
