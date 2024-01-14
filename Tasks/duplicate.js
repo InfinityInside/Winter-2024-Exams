@@ -6,7 +6,7 @@ const duplicate = (value, number) => {
 
   const result = [];
   for (let i = 0; i < number; i++) {
-    result[i] = value;
+    result.push(value);
   }
 
   return result;
