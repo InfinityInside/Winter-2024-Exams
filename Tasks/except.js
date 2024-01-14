@@ -3,13 +3,15 @@
 
 const copyExcept = (dictionary, ...exceptValues) => {
   const keys = Object.keys(dictionary);
+  const newDictionary = {};
 
   for (const key of keys) {
-    if (exceptValues.includes(key))
-      delete dictionary[key];
+    if (!exceptValues.includes(key)) {
+      newDictionary[key] = dictionary[key];
+    }
   }
 
-  return dictionary;
+  return newDictionary;
 };
 
 module.exports = copyExcept;

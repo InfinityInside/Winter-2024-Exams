@@ -3,14 +3,15 @@
 
 const deleteKeys = (dictionary, ...toDelete) => {
   const keys = Object.keys(dictionary);
+  const newDictionary = {};
 
   for (const key of keys) {
-    if (toDelete.includes(key)) {
-      delete dictionary[key];
+    if (!toDelete.includes(key)) {
+      newDictionary[key] = dictionary[key];
     }
   }
 
-  return dictionary;
+  return newDictionary;
 };
 
 module.exports = deleteKeys;
