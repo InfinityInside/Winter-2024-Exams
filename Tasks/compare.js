@@ -1,8 +1,7 @@
 // Compare two dictionaries
 'use strict';
 
-const compare = (firstValues, ...otherValues) => {
-  const secondValues = otherValues[0];
+const compare = (firstValues, secondValues) => {
   const firstKeys = Object.keys(firstValues);
   const secondKeys = Object.keys(secondValues);
 
