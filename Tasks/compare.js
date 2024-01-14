@@ -7,12 +7,11 @@ const compare = (firstValues, secondValues) => {
 
   if (firstKeys.join('-') !== secondKeys.join('-')) return false;
 
-  let equal = true;
   for (const key of firstKeys) {
-    if (firstValues[key] !== secondValues[key]) equal = false;
+    if (firstValues[key] !== secondValues[key]) return false;
   }
 
-  return equal;
+  return true;
 };
 
 module.exports = compare;
