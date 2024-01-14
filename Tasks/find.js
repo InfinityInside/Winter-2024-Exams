@@ -10,7 +10,6 @@ const find = (object, ...values) => {
       if (typeof object) return object;
     }
   }
-  values.push(5020);
   return undefined;
 };
 

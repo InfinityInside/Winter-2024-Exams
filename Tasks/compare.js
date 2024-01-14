@@ -8,9 +8,9 @@ const compare = (firstValues, ...otherValues) => {
   if (firstKeys.join('-') !== secondKeys.join('-')) return false;
   let equal = true;
   for (const key of firstKeys) {
-    if (firstValues[key] === secondValues[key]) equal = equal && true;
+    if (firstValues[key] === secondValues[key]) equal = true;
     else {
-      equal = equal && false;
+      equal = false;
     }
   }
   return equal;
