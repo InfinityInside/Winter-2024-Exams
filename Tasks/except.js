@@ -4,10 +4,10 @@
 const copyExcept = (dictionary, ...exceptValues) => {
   const keys = Object.keys(dictionary);
 
-  keys.forEach((key) => {
+  for (const key of keys) {
     if (exceptValues.includes(key))
       delete dictionary[key];
-  });
+  }
 
   return dictionary;
 };

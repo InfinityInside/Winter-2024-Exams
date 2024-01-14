@@ -4,13 +4,11 @@
 const deleteKeys = (dictionary, ...toDelete) => {
   const keys = Object.keys(dictionary);
 
-  keys.forEach(
-    (key) => {
-      if (toDelete.includes(key)) {
-        delete dictionary[key];
-      }
-    },
-  );
+  for (const key of keys) {
+    if (toDelete.includes(key)) {
+      delete dictionary[key];
+    }
+  }
 
   return dictionary;
 };
